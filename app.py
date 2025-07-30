@@ -1,6 +1,7 @@
 import pandas as pd
 import streamlit as st
 import numpy as np
+import seaborn as sns
 from sklearn.ensemble import RandomForestClassifier
 
 st.title("Penguin Species Prediction ML app")
@@ -28,7 +29,8 @@ with st.expander("Data"):
   info
 
 with st.expander("Data Visualization"):
-  st.scatter_chart(data=df,'bill_length_mm',y='body_mass_g',color='species')
+  st.scatter_chart(data=df,'bill_length_mm',y='body_mass_g')
+  sns.boxplot(data=df)
   
 with st.expander("Input Data"):
   pass
