@@ -32,7 +32,7 @@ with st.expander("Data Visualization"):
   st.scatter_chart(data=df,x="bill_length_mm",y="body_mass_g",color="species")
 
 with st.expander("Data Preparation"):
-  
+  pass
 
 with st.sidebar:
   st.header("Input Variables")
