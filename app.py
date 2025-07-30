@@ -30,7 +30,7 @@ with st.expander("Data"):
 
 with st.expander("Data Visualization"):
   st.scatter_chart(data=df,x="bill_length_mm",y="body_mass_g",color="species")
-  sns_df=load_dataset(df)
+  sns_df=sns.load_dataset(df)
   sns.boxplot(data=sns_df)
   
 with st.expander("Input Data"):
