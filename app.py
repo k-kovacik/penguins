@@ -28,7 +28,7 @@ with st.expander("Data"):
   info
 
 with st.expander("Data Visualization"):
-  st.scatter_chart(data=df,'bill_length_mm', y='body_mass_g',color='species')
+  st.scatter_chart(data=df,'bill_length_mm',y='body_mass_g',color='species')
   
 with st.expander("Input Data"):
   pass
