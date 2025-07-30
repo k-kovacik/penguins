@@ -30,8 +30,6 @@ with st.expander("Data"):
 
 with st.expander("Data Visualization"):
   st.scatter_chart(data=df,x="bill_length_mm",y="body_mass_g",color="species")
-  sns_df=sns.load_dataset("https://raw.githubusercontent.com/dataprofessor/data/master/penguins_cleaned.csv")
-  sns.boxplot(data=sns_df)
 
 with st.expander("Data Preparation"):
   pass
