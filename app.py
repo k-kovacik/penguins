@@ -37,18 +37,18 @@ with st.expander("Data Preparation"):
 with st.sidebar:
   st.header("Input Variables")
   island = st.selectbox('Island', ["Torgersen","Biscoe","Dream"])
-  bill_length = st.slider('Bill Length (mm)', 30.0,60.0,45.0)
+  bill_length_mm = st.slider('Bill Length (mm)', 30.0,60.0,45.0)
   bill_depth_mm = st.slider('Bill Depth (mm)', 13.0,22.0,17.5)
   flipper_length = st.slider('Flipper Length (mm)', 172.0,231.0,201.0)
   body_mass = st.slider('Body Mass (g)', 2500,6500,4500)
   gender = st.selectbox('Gender', ['Male', 'Female'])
 
   data = {'island':island,
-          'bill_length_mm':bill_length_mm,
-          'bill_depth_mm':bill_depth_mm,
-          'flipper_length_mm':flipper_length_mm,
-          'body_mass_g':body_mass_g,
-          'gender':gender
+          'bill_length_mm': bill_length_mm,
+          'bill_depth_mm': bill_depth_mm,
+          'flipper_length_mm': flipper_length_mm,
+          'body_mass_g': body_mass_g,
+          'gender': gender
   }
 
   input_df = pd.DataFrame(data, index=[0])
