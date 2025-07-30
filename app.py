@@ -32,9 +32,6 @@ with st.expander("Data Visualization"):
   st.scatter_chart(data=df,x="bill_length_mm",y="body_mass_g",color="species")
   sns_df=sns.load_dataset("https://raw.githubusercontent.com/dataprofessor/data/master/penguins_cleaned.csv")
   sns.boxplot(data=sns_df)
-  
-with st.expander("Input Data"):
-  pass
 
 with st.expander("Data Preparation"):
   pass
@@ -47,5 +44,22 @@ with st.sidebar:
   flipper_length = st.slider('Flipper Length (mm)', 172.0,231.0,201.0)
   body_mass = st.slider('Body Mass (g)', 2500,6500,4500)
   gender = st.selectbox('Gender', ['Male', 'Female'])
+
+  data = {'island':island,
+          'bill_length_mm':bill_length_mm,
+          'bill_depth_mm':bill_depth_mm,
+          'flipper_length_mm':flipper_length_mm,
+          'body_mass_g':body_mass_g,
+          'gender':gender
+  }
+
+  input_df = pd.DataFrame(data, index=[0])
+  input_penguins = pd.concat([input_df,X_raw], axis=0)
+
+with st.expander("Input Data"):
+  st.write("**Input Data**")
+  input_df
+  st.write("**Combined Data**")
+  input_penguins
   
 
